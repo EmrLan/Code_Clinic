@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { StyleSheet, View } from 'react-native';
-import QuantityStepper from './components/QuantityStepper';
-import useToggle from './hooks/useToggle';
-import AppText from './components/AppText';
+import QuantityStepper from '../components/QuantityStepper';
+import useToggle from '../hooks/useToggle';
+import AppText from '../components/AppText';
+import Carousel from '../components/Carousel';
 
-export default function Main() {
+export default function Home() {
   const [value, toggle, setTrue, setFalse] = useToggle();
 
   const [favorite, setForite] = useState(true);
@@ -28,7 +29,7 @@ export default function Main() {
         initialFavorite={favorite}
         onChangeFavorite={handleFavoriteChange}
       /> */}
-      <QuantityStepper initial={3} min={1} max={20} />
+      {/* <QuantityStepper initial={3} min={1} max={20} />
       <QuantityStepper />
       <QuantityStepper initial={20} />
       <QuantityStepper initial={-20} />
@@ -39,8 +40,8 @@ export default function Main() {
       <AppText variant={'body'}>body</AppText>
       <AppText style={{color: 'blue'}} variant={'title'}>Styled Title</AppText>
       <AppText style={{color: 'green'}} variant={'subtitle'}>Styled subtitle</AppText>
-      <AppText style={{color: 'orange'}} variant={'body'}>Styled body</AppText>
-      
+      <AppText style={{color: 'orange'}} variant={'body'}>Styled body</AppText> */}
+      <Carousel />
       
     </View>
   );
@@ -51,8 +52,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     backgroundColor: '#ecf0f1',
-    padding: 8,
-    gap: 10,
-    alignItems: 'center',
+    padding: 10,
   },
 });
