@@ -3,6 +3,7 @@ import { Image } from 'react-native';
 import Account from '../views/Account';
 import Flights from '../views/Flights';
 import Home from '../views/Home';
+import FlightsStack from './FlightsStack';
 
 const Tab = createBottomTabNavigator();
 
@@ -23,7 +24,7 @@ export default function BottomTab() {
       />
       <Tab.Screen
         name={'Flights'}
-        component={Flights}
+        component={FlightsStack}
         options={{
           tabBarIcon: ({ size, color }) => (
             <Image
